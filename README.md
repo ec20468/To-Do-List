@@ -15,7 +15,7 @@ A lightweight to-do list application that allows users to add, track, and comple
 ## Installation and Setup Instructions  
 
 1. Clone down this repository:  
-   `git clone <repository-url>`  
+   `git clone https://github.com/ec20468/To-Do-List`  
 
 2. Open `index.html` in a browser to run the application.  
 
