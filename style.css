@@ -1,0 +1,232 @@
+@import url("https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Press Start 2P", sans-serif;
+  color: #eee;
+  background-color: #222;
+}
+
+header {
+  position: relative;
+  height: 35vh;
+  border-bottom: 7px solid #eee;
+}
+
+main {
+  height: 65vh;
+  color: #eee;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.right {
+  width: 52rem;
+  font-size: 2rem;
+}
+
+h1 {
+  font-size: 4rem;
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  top: 52%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.number {
+  background: #eee;
+  color: #333;
+  font-size: 6rem;
+  width: 15rem;
+  padding: 3rem 0;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 50%);
+}
+
+.close-modal {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background: none;
+  color: #eee;
+  font-size: 2rem;
+  border: none;
+  cursor: pointer;
+}
+
+.show-modal {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  border: none;
+  background-color: transparent;
+  color: white;
+  font-size: 1.5rem;
+  padding: 1rem 2rem;
+  cursor: pointer;
+  font-family: "Press Start 2P", sans-serif;
+}
+
+.submit {
+  border: none;
+  background-color: #eee;
+  color: #222;
+  font-size: 1rem;
+  font-family: inherit;
+  padding: 2rem 3rem;
+  cursor: pointer;
+}
+
+.btn {
+  border: none;
+  background-color: #eee;
+  color: #222;
+  font-size: 2rem;
+  font-family: inherit;
+  padding: 2rem 3rem;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #ccc;
+}
+
+/* Modal and Overlay Styles */
+.modal {
+  position: fixed;
+  /* top: 50%;*/
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #333;
+  color: #eee;
+  padding: 3rem;
+  width: 40rem; /* Increased width for better input accommodation */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background: rgba(0, 0, 0, 0.75);
+  z-index: 50;
+}
+
+.desc,
+.date,
+.title {
+  background-color: #333;
+  color: #eee;
+  border: 1px solid #eee;
+  padding: 1rem;
+  font-size: 1.5rem;
+  width: 100%;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+}
+
+.desc::placeholder,
+.date::placeholder,
+.title::placeholder {
+  color: #aaa;
+}
+
+.todo-item {
+  width: 80%;
+  min-width: 400px;
+  margin: 1.5rem auto;
+  text-align: left;
+  border: 1px solid #eee;
+  padding: 1.5rem;
+  background-color: #333;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  font-family: "Roboto", sans-serif;
+}
+
+.todo-item h2,
+.todo-item h3,
+.todo-item .date {
+  margin-bottom: 0.5rem;
+  color: #eee;
+}
+
+.title {
+  width: 100%;
+  font-size: 1.9rem;
+}
+
+.desc {
+  width: 100%;
+  font-size: 1.4rem;
+  color: #eee;
+}
+
+.date {
+  font-size: 1.4rem;
+  color: #ccc;
+}
+
+/* Checkbox Styles */
+.checkbox {
+  position: absolute;
+  right: 1rem; /* Align right */
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+}
+
+.checkbox:checked {
+  background-color: transparent; /* No background color when checked */
+  border: none; /* Remove border when checked */
+}
+
+/* make sure tick is visible when checked */
+.checkbox:checked::after {
+  content: "✅";
+  color: green;
+  font-size: 18px;
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  z-index: 1;
+}
+
+.title,
+.desc {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
+}
