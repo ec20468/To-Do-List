@@ -1,6 +1,6 @@
-## Project Name & Pitch  
 
-### TodoTracker  
+
+## TodoList
 A lightweight to-do list application that allows users to add, track, and complete tasks in real-time. Built entirely with **vanilla JavaScript**, **HTML**, and **CSS**.  
 
 ---  
