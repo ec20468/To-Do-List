@@ -108,16 +108,14 @@ h1 {
   background-color: #ccc;
 }
 
-/* Modal and Overlay Styles */
 .modal {
   position: fixed;
-  /* top: 50%;*/
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: #333;
   color: #eee;
   padding: 3rem;
-  width: 40rem; /* Increased width for better input accommodation */
+  width: 40rem;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
   border-radius: 5px;
   z-index: 100;
@@ -199,21 +197,19 @@ h1 {
   color: #ccc;
 }
 
-/* Checkbox Styles */
 .checkbox {
   position: absolute;
-  right: 1rem; /* Align right */
+  right: 1rem;
   cursor: pointer;
   width: 24px;
   height: 24px;
 }
 
 .checkbox:checked {
-  background-color: transparent; /* No background color when checked */
-  border: none; /* Remove border when checked */
+  background-color: transparent;
+  border: none;
 }
 
-/* make sure tick is visible when checked */
 .checkbox:checked::after {
   content: "✅";
   color: green;
