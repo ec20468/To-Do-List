@@ -226,3 +226,42 @@ h1 {
   word-wrap: break-word;
   hyphens: auto;
 }
+
+.btn-delete {
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top: 35px;
+  right: 1.2rem;
+  margin-top: 1rem;
+  width: 24px;
+  height: 24px;
+}
+
+.btn-delete svg {
+  width: 2rem;
+  height: 2rem;
+  transition: transform 0.2s ease, stroke 0.2s ease;
+}
+
+.btn-delete:hover svg {
+  transform: scale(1.2);
+  stroke: darkred;
+}
+
+@media (max-width: 768px) {
+  main {
+    flex-direction: column; /* Stack the content vertically on mobile */
+  }
+
+  .right {
+    order: 2;
+    width: 100%;
+    margin-top: 2rem;
+  }
+
+  .todo-list {
+    width: 100%;
+  }
+}
